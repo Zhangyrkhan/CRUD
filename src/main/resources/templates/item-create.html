@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Item</title>
+</head>
+<body>
+<form action="#" th:action="@{/item-create}" th:object="${item}" method="post">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name" required>
+
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+
+    <label for="price">Price</label>
+    <input type="number" th:field="*{price}" id="price" placeholder="Price" step="0.01" required>
+
+    <input type="submit" value="Create Item">
+</form>
+</body>
+</html>
